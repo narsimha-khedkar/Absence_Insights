@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Lakehouse",
+    "displayName": "stagingAbsenceData"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "8171f6cc-221d-b116-4574-4006b5d8d4b2"
+  }
+}

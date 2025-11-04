@@ -1,0 +1,67 @@
+table DIM_GP_STATUS_TBL
+	lineageTag: 936990c0-8950-43ff-9941-d9e993a4606d
+	sourceLineageTag: [Absence].[DIM_GP_STATUS_TBL]
+
+	column TRANSACTION_NBR
+		dataType: string
+		sourceProviderType: varchar(255)
+		lineageTag: 632497e2-8698-488b-b137-c179ecae1cac
+		sourceLineageTag: TRANSACTION_NBR
+		summarizeBy: none
+		sourceColumn: TRANSACTION_NBR
+
+		annotation SummarizationSetBy = Automatic
+
+	column EMPLID_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 55a13c82-54e2-4b97-8d27-659cd3052db5
+		sourceLineageTag: EMPLID_ID
+		summarizeBy: none
+		sourceColumn: EMPLID_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column SUB_DATE
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: c6403d01-8896-488e-bd17-8c1831d61bda
+		sourceLineageTag: SUB_DATE
+		summarizeBy: none
+		sourceColumn: SUB_DATE
+
+		annotation SummarizationSetBy = Automatic
+
+	column APR_DATE
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: b9a3865b-7304-4e2d-af04-f95e2905e68b
+		sourceLineageTag: APR_DATE
+		summarizeBy: none
+		sourceColumn: APR_DATE
+
+		annotation SummarizationSetBy = Automatic
+
+	column STATUS_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 0c56b942-62fa-4fb5-9896-059a88ee5581
+		sourceLineageTag: STATUS_ID
+		summarizeBy: none
+		sourceColumn: STATUS_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DIM_GP_STATUS_TBL = entity
+		mode: directLake
+		source
+			entityName: DIM_GP_STATUS_TBL
+			schemaName: Absence
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

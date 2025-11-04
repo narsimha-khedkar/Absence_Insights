@@ -1,0 +1,1399 @@
+{
+  "name": "{{Dataset_Name}}",
+  "compatibilityLevel": 1604,
+  "model": {
+    "name": "{{Dataset_Name}}",
+    "culture": "en-US",
+    "collation": "Latin1_General_100_BIN2_UTF8",
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "DIM_COUNTRY_TBL",
+        "sourceLineageTag": "[Absence].[DIM_COUNTRY_TBL]",
+        "columns": [
+          {
+            "name": "COUNTRY_ID",
+            "dataType": "int64",
+            "sourceColumn": "COUNTRY_ID",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "COUNTRY_ID",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "COUNTRY",
+            "dataType": "string",
+            "sourceColumn": "COUNTRY",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "COUNTRY",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "DESCR",
+            "dataType": "string",
+            "sourceColumn": "DESCR",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "DESCR",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "DIM_COUNTRY_TBL",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "Absence"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "DIM_DEPT_TBL",
+        "sourceLineageTag": "[Absence].[DIM_DEPT_TBL]",
+        "columns": [
+          {
+            "name": "DEPTID_ID",
+            "dataType": "int64",
+            "sourceColumn": "DEPTID_ID",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "DEPTID_ID",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "DEPTID",
+            "dataType": "string",
+            "sourceColumn": "DEPTID",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "DEPTID",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "SETID_ID",
+            "dataType": "int64",
+            "sourceColumn": "SETID_ID",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "SETID_ID",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "DESCR",
+            "dataType": "string",
+            "sourceColumn": "DESCR",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "DESCR",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "DIM_DEPT_TBL",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "Absence"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "DIM_GP_STATUS_TBL",
+        "sourceLineageTag": "[Absence].[DIM_GP_STATUS_TBL]",
+        "columns": [
+          {
+            "name": "TRANSACTION_NBR",
+            "dataType": "string",
+            "sourceColumn": "TRANSACTION_NBR",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "TRANSACTION_NBR",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "EMPLID_ID",
+            "dataType": "int64",
+            "sourceColumn": "EMPLID_ID",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "EMPLID_ID",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "SUB_DATE",
+            "dataType": "dateTime",
+            "sourceColumn": "SUB_DATE",
+            "formatString": "General Date",
+            "sourceProviderType": "date",
+            "sourceLineageTag": "SUB_DATE",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "APR_DATE",
+            "dataType": "dateTime",
+            "sourceColumn": "APR_DATE",
+            "formatString": "General Date",
+            "sourceProviderType": "date",
+            "sourceLineageTag": "APR_DATE",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "STATUS_ID",
+            "dataType": "int64",
+            "sourceColumn": "STATUS_ID",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "STATUS_ID",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "DIM_GP_STATUS_TBL",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "Absence"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "DIM_JOB_TBL",
+        "sourceLineageTag": "[Absence].[DIM_JOB_TBL]",
+        "columns": [
+          {
+            "name": "EMPLID_ID",
+            "dataType": "int64",
+            "sourceColumn": "EMPLID_ID",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "EMPLID_ID",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "EMPL_RCD",
+            "dataType": "int64",
+            "sourceColumn": "EMPL_RCD",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "EMPL_RCD",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "DEPTID_ID",
+            "dataType": "int64",
+            "sourceColumn": "DEPTID_ID",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "DEPTID_ID",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "LOCATION_ID",
+            "dataType": "int64",
+            "sourceColumn": "LOCATION_ID",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "LOCATION_ID",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "HIRE_DT",
+            "dataType": "dateTime",
+            "sourceColumn": "HIRE_DT",
+            "formatString": "General Date",
+            "sourceProviderType": "date",
+            "sourceLineageTag": "HIRE_DT",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "HOURLY_RT",
+            "dataType": "double",
+            "sourceColumn": "HOURLY_RT",
+            "sourceProviderType": "float",
+            "sourceLineageTag": "HOURLY_RT",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "DIM_JOB_TBL",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "Absence"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "DIM_LOCATION_TBL",
+        "sourceLineageTag": "[Absence].[DIM_LOCATION_TBL]",
+        "columns": [
+          {
+            "name": "LOCATION_ID",
+            "dataType": "int64",
+            "sourceColumn": "LOCATION_ID",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "LOCATION_ID",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "LOCATION",
+            "dataType": "string",
+            "sourceColumn": "LOCATION",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "LOCATION",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "SETID_ID",
+            "dataType": "int64",
+            "sourceColumn": "SETID_ID",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "SETID_ID",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "COUNTRY_ID",
+            "dataType": "int64",
+            "sourceColumn": "COUNTRY_ID",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "COUNTRY_ID",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ADDRESS",
+            "dataType": "string",
+            "sourceColumn": "ADDRESS",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "ADDRESS",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "DIM_LOCATION_TBL",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "Absence"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "DIM_MAR_STATUS_TBL",
+        "sourceLineageTag": "[Absence].[DIM_MAR_STATUS_TBL]",
+        "columns": [
+          {
+            "name": "FIELDVALUE_ID",
+            "dataType": "int64",
+            "sourceColumn": "FIELDVALUE_ID",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "FIELDVALUE_ID",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "FIELDVALUE",
+            "dataType": "string",
+            "sourceColumn": "FIELDVALUE",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "FIELDVALUE",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "XLATLONGNAME",
+            "dataType": "string",
+            "sourceColumn": "XLATLONGNAME",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "XLATLONGNAME",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "DIM_MAR_STATUS_TBL",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "Absence"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "DIM_PERSONAL_TBL",
+        "sourceLineageTag": "[Absence].[DIM_PERSONAL_TBL]",
+        "columns": [
+          {
+            "name": "EMPLID_ID",
+            "dataType": "int64",
+            "sourceColumn": "EMPLID_ID",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "EMPLID_ID",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "EMPLID",
+            "dataType": "string",
+            "sourceColumn": "EMPLID",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "EMPLID",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "NAME",
+            "dataType": "string",
+            "sourceColumn": "NAME",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "NAME",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "LAST_NAME",
+            "dataType": "string",
+            "sourceColumn": "LAST_NAME",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "LAST_NAME",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "FIRST_NAME",
+            "dataType": "string",
+            "sourceColumn": "FIRST_NAME",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "FIRST_NAME",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "SEX",
+            "dataType": "int64",
+            "sourceColumn": "SEX",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "SEX",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "MAR_STATUS",
+            "dataType": "int64",
+            "sourceColumn": "MAR_STATUS",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "MAR_STATUS",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "BIRTHDATE",
+            "dataType": "dateTime",
+            "sourceColumn": "BIRTHDATE",
+            "formatString": "General Date",
+            "sourceProviderType": "date",
+            "sourceLineageTag": "BIRTHDATE",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "DIM_PERSONAL_TBL",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "Absence"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "DIM_PIN_TBL",
+        "sourceLineageTag": "[Absence].[DIM_PIN_TBL]",
+        "columns": [
+          {
+            "name": "PIN_NUM",
+            "dataType": "int64",
+            "sourceColumn": "PIN_NUM",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "PIN_NUM",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "DESCR",
+            "dataType": "string",
+            "sourceColumn": "DESCR",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "DESCR",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "DIM_PIN_TBL",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "Absence"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "DIM_SETID_TBL",
+        "sourceLineageTag": "[Absence].[DIM_SETID_TBL]",
+        "columns": [
+          {
+            "name": "SETID_ID",
+            "dataType": "int64",
+            "sourceColumn": "SETID_ID",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "SETID_ID",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "SETID",
+            "dataType": "string",
+            "sourceColumn": "SETID",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "SETID",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "DESCR",
+            "dataType": "string",
+            "sourceColumn": "DESCR",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "DESCR",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "DIM_SETID_TBL",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "Absence"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "DIM_XLAT_TBL",
+        "sourceLineageTag": "[Absence].[DIM_XLAT_TBL]",
+        "columns": [
+          {
+            "name": "FIELDVALUE_ID",
+            "dataType": "int64",
+            "sourceColumn": "FIELDVALUE_ID",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "FIELDVALUE_ID",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "FIELDVALUE",
+            "dataType": "string",
+            "sourceColumn": "FIELDVALUE",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "FIELDVALUE",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "XLATLONGNAME",
+            "dataType": "string",
+            "sourceColumn": "XLATLONGNAME",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "XLATLONGNAME",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "DIM_XLAT_TBL",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "Absence"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "FACT_ABSENCE_TBL",
+        "sourceLineageTag": "[Absence].[FACT_ABSENCE_TBL]",
+        "columns": [
+          {
+            "name": "TRANSACTION_NBR",
+            "dataType": "string",
+            "sourceColumn": "TRANSACTION_NBR",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "TRANSACTION_NBR",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "EMPLID_ID",
+            "dataType": "int64",
+            "sourceColumn": "EMPLID_ID",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "EMPLID_ID",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "EMPL_RCD",
+            "dataType": "string",
+            "sourceColumn": "EMPL_RCD",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "EMPL_RCD",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "PIN_NUM",
+            "dataType": "int64",
+            "sourceColumn": "PIN_NUM",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "PIN_NUM",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "BGN_DT",
+            "dataType": "dateTime",
+            "sourceColumn": "BGN_DT",
+            "formatString": "General Date",
+            "sourceProviderType": "date",
+            "sourceLineageTag": "BGN_DT",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "END_DT",
+            "dataType": "dateTime",
+            "sourceColumn": "END_DT",
+            "formatString": "General Date",
+            "sourceProviderType": "date",
+            "sourceLineageTag": "END_DT",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "DURATION_HOURS",
+            "dataType": "int64",
+            "sourceColumn": "DURATION_HOURS",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "DURATION_HOURS",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "FACT_ABSENCE_TBL",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "Absence"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "ABSENCE_PRESENTATION_TBL",
+        "sourceLineageTag": "[dbo].[ABSENCE_PRESENTATION_TBL]",
+        "columns": [
+          {
+            "name": "NAME",
+            "dataType": "string",
+            "sourceColumn": "NAME",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "NAME",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "FIRST_NAME",
+            "dataType": "string",
+            "sourceColumn": "FIRST_NAME",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "FIRST_NAME",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "LAST_NAME",
+            "dataType": "string",
+            "sourceColumn": "LAST_NAME",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "LAST_NAME",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "BGN_DT",
+            "dataType": "dateTime",
+            "sourceColumn": "BGN_DT",
+            "formatString": "General Date",
+            "sourceProviderType": "date",
+            "sourceLineageTag": "BGN_DT",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "END_DT",
+            "dataType": "dateTime",
+            "sourceColumn": "END_DT",
+            "formatString": "General Date",
+            "sourceProviderType": "date",
+            "sourceLineageTag": "END_DT",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "DURATION_HOURS",
+            "dataType": "int64",
+            "sourceColumn": "DURATION_HOURS",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "DURATION_HOURS",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ABS_TYPE",
+            "dataType": "string",
+            "sourceColumn": "ABS_TYPE",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "ABS_TYPE",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "SUB_DATE",
+            "dataType": "dateTime",
+            "sourceColumn": "SUB_DATE",
+            "formatString": "General Date",
+            "sourceProviderType": "date",
+            "sourceLineageTag": "SUB_DATE",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "APR_DATE",
+            "dataType": "dateTime",
+            "sourceColumn": "APR_DATE",
+            "formatString": "General Date",
+            "sourceProviderType": "date",
+            "sourceLineageTag": "APR_DATE",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "STATUS",
+            "dataType": "string",
+            "sourceColumn": "STATUS",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "STATUS",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "HIRE_DT",
+            "dataType": "dateTime",
+            "sourceColumn": "HIRE_DT",
+            "formatString": "General Date",
+            "sourceProviderType": "date",
+            "sourceLineageTag": "HIRE_DT",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "HOURLY_RT",
+            "dataType": "double",
+            "sourceColumn": "HOURLY_RT",
+            "sourceProviderType": "float",
+            "sourceLineageTag": "HOURLY_RT",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "COUNTRY",
+            "dataType": "string",
+            "sourceColumn": "COUNTRY",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "COUNTRY",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "DEPARTMENT",
+            "dataType": "string",
+            "sourceColumn": "DEPARTMENT",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "DEPARTMENT",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "BIRTHDATE",
+            "dataType": "dateTime",
+            "sourceColumn": "BIRTHDATE",
+            "formatString": "General Date",
+            "sourceProviderType": "date",
+            "sourceLineageTag": "BIRTHDATE",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "GENDER",
+            "dataType": "string",
+            "sourceColumn": "GENDER",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "GENDER",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "MARITAL_STATUS",
+            "dataType": "string",
+            "sourceColumn": "MARITAL_STATUS",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "MARITAL_STATUS",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "TOTAL_COST",
+            "dataType": "double",
+            "sourceColumn": "TOTAL_COST",
+            "sourceProviderType": "float",
+            "sourceLineageTag": "TOTAL_COST",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "APPROVAL_TIME",
+            "dataType": "double",
+            "sourceColumn": "APPROVAL_TIME",
+            "sourceProviderType": "float",
+            "sourceLineageTag": "APPROVAL_TIME",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "ABSENCE_PRESENTATION_TBL",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "True"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "26b7d8ab37339097b1dc871a95334377",
+        "fromTable": "FACT_ABSENCE_TBL",
+        "fromColumn": "PIN_NUM",
+        "toTable": "DIM_PIN_TBL",
+        "toColumn": "PIN_NUM",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none"
+      },
+      {
+        "name": "4e46eb36b67c91562ae036d6694a719d",
+        "fromTable": "DIM_JOB_TBL",
+        "fromColumn": "EMPLID_ID",
+        "toTable": "DIM_PERSONAL_TBL",
+        "toColumn": "EMPLID_ID",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none"
+      },
+      {
+        "name": "4fb5352d12df3a41cc4a651cf47d77e3",
+        "fromTable": "DIM_DEPT_TBL",
+        "fromColumn": "SETID_ID",
+        "toTable": "DIM_SETID_TBL",
+        "toColumn": "SETID_ID",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none"
+      },
+      {
+        "name": "5bb052c968d87c23656080050692e60d",
+        "fromTable": "DIM_JOB_TBL",
+        "fromColumn": "DEPTID_ID",
+        "toTable": "DIM_DEPT_TBL",
+        "toColumn": "DEPTID_ID",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none"
+      },
+      {
+        "name": "ae49d94db365c61dcac163bea5c52d99",
+        "fromTable": "DIM_JOB_TBL",
+        "fromColumn": "LOCATION_ID",
+        "toTable": "DIM_LOCATION_TBL",
+        "toColumn": "LOCATION_ID",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none"
+      },
+      {
+        "name": "b4573471fdc4ba5eff97418b50dc12a6",
+        "fromTable": "FACT_ABSENCE_TBL",
+        "fromColumn": "EMPLID_ID",
+        "toTable": "DIM_PERSONAL_TBL",
+        "toColumn": "EMPLID_ID",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none"
+      },
+      {
+        "name": "e6f5228781fde9fff655f955e0acbc14",
+        "fromTable": "DIM_LOCATION_TBL",
+        "fromColumn": "SETID_ID",
+        "toTable": "DIM_SETID_TBL",
+        "toColumn": "SETID_ID",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none"
+      },
+      {
+        "name": "e8c0ca7f5802469074307feb483b3e05",
+        "fromTable": "DIM_LOCATION_TBL",
+        "fromColumn": "COUNTRY_ID",
+        "toTable": "DIM_COUNTRY_TBL",
+        "toColumn": "COUNTRY_ID",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none"
+      }
+    ],
+    "expressions": [
+      {
+        "name": "DatabaseQuery",
+        "kind": "m",
+        "expression": "let\n    database = {{TDS_Endpoint}}\nin\n    database\n"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "SourceLineageTagType",
+        "value": "DatabaseFullyQualifiedName"
+      }
+    ]
+  }
+}

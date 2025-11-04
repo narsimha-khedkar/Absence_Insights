@@ -1,0 +1,44 @@
+table DIM_SETID_TBL
+	lineageTag: 6efa33dc-0a2b-464d-bf3e-0eb9b85e40ae
+	sourceLineageTag: [Absence].[DIM_SETID_TBL]
+
+	column SETID_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: ba3f1d5e-0dd9-46d0-abda-35303b3a6038
+		sourceLineageTag: SETID_ID
+		summarizeBy: count
+		sourceColumn: SETID_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column SETID
+		dataType: string
+		sourceProviderType: varchar(255)
+		lineageTag: a27292fe-9c60-4016-a688-16502e1c4ec9
+		sourceLineageTag: SETID
+		summarizeBy: none
+		sourceColumn: SETID
+
+		annotation SummarizationSetBy = Automatic
+
+	column DESCR
+		dataType: string
+		sourceProviderType: varchar(255)
+		lineageTag: 79876532-e8e9-4ae7-876b-33de7efccc51
+		sourceLineageTag: DESCR
+		summarizeBy: none
+		sourceColumn: DESCR
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DIM_SETID_TBL = entity
+		mode: directLake
+		source
+			entityName: DIM_SETID_TBL
+			schemaName: Absence
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

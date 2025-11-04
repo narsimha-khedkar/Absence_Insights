@@ -1,0 +1,87 @@
+table FACT_ABSENCE_TBL
+	lineageTag: c2b16a83-2a88-4907-9bfb-77ddee6e81c8
+	sourceLineageTag: [Absence].[FACT_ABSENCE_TBL]
+
+	column TRANSACTION_NBR
+		dataType: string
+		sourceProviderType: varchar(255)
+		lineageTag: b1ff7744-9bd2-4e02-8882-8dd658dc3234
+		sourceLineageTag: TRANSACTION_NBR
+		summarizeBy: none
+		sourceColumn: TRANSACTION_NBR
+
+		annotation SummarizationSetBy = Automatic
+
+	column EMPLID_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 6cec9016-88ad-4d85-bbd4-0a7e3fc52864
+		sourceLineageTag: EMPLID_ID
+		summarizeBy: none
+		sourceColumn: EMPLID_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column EMPL_RCD
+		dataType: string
+		sourceProviderType: varchar(255)
+		lineageTag: dc963866-eb79-419e-a943-610184a3cfc8
+		sourceLineageTag: EMPL_RCD
+		summarizeBy: none
+		sourceColumn: EMPL_RCD
+
+		annotation SummarizationSetBy = Automatic
+
+	column PIN_NUM
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: c2e7e9d5-1d2b-440f-8b08-2f2267567d9b
+		sourceLineageTag: PIN_NUM
+		summarizeBy: none
+		sourceColumn: PIN_NUM
+
+		annotation SummarizationSetBy = Automatic
+
+	column BGN_DT
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: a3edf12d-3011-44c5-8cc4-c97a23ab9221
+		sourceLineageTag: BGN_DT
+		summarizeBy: none
+		sourceColumn: BGN_DT
+
+		annotation SummarizationSetBy = Automatic
+
+	column END_DT
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: b80190c7-c043-47b7-85be-5f9d2b9ab211
+		sourceLineageTag: END_DT
+		summarizeBy: none
+		sourceColumn: END_DT
+
+		annotation SummarizationSetBy = Automatic
+
+	column DURATION_HOURS
+		dataType: string
+		sourceProviderType: varchar(255)
+		lineageTag: f8146ed1-9a88-429c-8eaa-c9e7193b5f9b
+		sourceLineageTag: DURATION_HOURS
+		summarizeBy: none
+		sourceColumn: DURATION_HOURS
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FACT_ABSENCE_TBL = entity
+		mode: directLake
+		source
+			entityName: FACT_ABSENCE_TBL
+			schemaName: Absence
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

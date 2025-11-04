@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Absence_semantic"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "2d8c7e02-17c6-9633-4818-048cbea751c5"
+  }
+}

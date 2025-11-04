@@ -1,0 +1,178 @@
+{
+  "config": "{\"version\":\"5.59\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.65\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":0,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"visible\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "pods": [
+    {
+      "boundSection": "30739801c0b04bfa9a8d",
+      "config": "{\"acceptsFilterContext\":1}",
+      "name": "02446a8ffa101b7ff417"
+    }
+  ],
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 2,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "1f8a2d272f3c29f2d93d",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"991d302b98fd2b727448\",\"layouts\":[{\"id\":0,\"position\":{\"x\":8.082609231873171,\"y\":475.4043793656311,\"z\":2000,\"width\":432.78698523393615,\"height\":244.68262492852418,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(ABSENCE_PRESENTATION_TBL.DURATION_HOURS)\"}],\"Category\":[{\"queryRef\":\"ABSENCE_PRESENTATION_TBL.MARITAL_STATUS\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"ABSENCE_PRESENTATION_TBL\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"MARITAL_STATUS\"},\"Name\":\"ABSENCE_PRESENTATION_TBL.MARITAL_STATUS\",\"NativeReferenceName\":\"MARITAL_STATUS\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"DURATION_HOURS\"}},\"Function\":1},\"Name\":\"Sum(ABSENCE_PRESENTATION_TBL.DURATION_HOURS)\",\"NativeReferenceName\":\"Average of DURATION_HOURS\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"DURATION_HOURS\"}},\"Function\":1}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 244.68,
+          "width": 432.79,
+          "x": 8.08,
+          "y": 475.40,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"a3d3f25a2dce9936d0f0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":514,\"y\":66,\"z\":0,\"width\":253,\"height\":90,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"ABSENCE_PRESENTATION_TBL.BGN_DT\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"ABSENCE_PRESENTATION_TBL\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"BGN_DT\"},\"Name\":\"ABSENCE_PRESENTATION_TBL.BGN_DT\",\"NativeReferenceName\":\"BGN_DT\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"BGN_DT\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Between'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 90.00,
+          "width": 253.00,
+          "x": 514.00,
+          "y": 66.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"a7caf696e6584ca3235a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":4000,\"width\":1280,\"height\":51,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'rectangle'\"}}}}}],\"rotation\":[{\"properties\":{\"shapeAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}],\"text\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}},{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Absence Insights'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"20D\"}}}},\"selector\":{\"id\":\"default\"}}],\"fill\":[{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":9,\"Percent\":0}}}}}},\"selector\":{\"id\":\"default\"}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 51.00,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"b2c4bce3e48b1e35a2db\",\"layouts\":[{\"id\":0,\"position\":{\"x\":8.082609231873171,\"y\":166.0608805821215,\"z\":1000,\"width\":1265.2957361168728,\"height\":299.79132423675037,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"map\",\"projections\":{\"Category\":[{\"queryRef\":\"ABSENCE_PRESENTATION_TBL.COUNTRY\",\"active\":true}],\"Size\":[{\"queryRef\":\"Sum(ABSENCE_PRESENTATION_TBL.DURATION_HOURS)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"ABSENCE_PRESENTATION_TBL\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"COUNTRY\"},\"Name\":\"ABSENCE_PRESENTATION_TBL.COUNTRY\",\"NativeReferenceName\":\"COUNTRY\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"DURATION_HOURS\"}},\"Function\":0},\"Name\":\"Sum(ABSENCE_PRESENTATION_TBL.DURATION_HOURS)\",\"NativeReferenceName\":\"Sum of DURATION_HOURS\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 299.79,
+          "width": 1265.30,
+          "x": 8.08,
+          "y": 166.06,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"c25cd4c56dbb174d4c24\",\"layouts\":[{\"id\":0,\"position\":{\"x\":440.8695944658093,\"y\":475.4043793656311,\"z\":3000,\"width\":382.0869818703681,\"height\":238.06958101153703,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"pieChart\",\"projections\":{\"Category\":[{\"queryRef\":\"ABSENCE_PRESENTATION_TBL.GENDER\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(ABSENCE_PRESENTATION_TBL.DURATION_HOURS)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"ABSENCE_PRESENTATION_TBL\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"GENDER\"},\"Name\":\"ABSENCE_PRESENTATION_TBL.GENDER\",\"NativeReferenceName\":\"GENDER\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"DURATION_HOURS\"}},\"Function\":1},\"Name\":\"Sum(ABSENCE_PRESENTATION_TBL.DURATION_HOURS)\",\"NativeReferenceName\":\"Average of DURATION_HOURS\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"DURATION_HOURS\"}},\"Function\":1}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 238.07,
+          "width": 382.09,
+          "x": 440.87,
+          "y": 475.40,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"fbff32d04a439a849157\",\"layouts\":[{\"id\":0,\"position\":{\"x\":823,\"y\":475,\"width\":450,\"height\":238,\"z\":5000,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"pieChart\",\"projections\":{\"Category\":[{\"queryRef\":\"ABSENCE_PRESENTATION_TBL.ABS_TYPE\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(ABSENCE_PRESENTATION_TBL.DURATION_HOURS)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"ABSENCE_PRESENTATION_TBL\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"ABS_TYPE\"},\"Name\":\"ABSENCE_PRESENTATION_TBL.ABS_TYPE\",\"NativeReferenceName\":\"ABS_TYPE\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"DURATION_HOURS\"}},\"Function\":0},\"Name\":\"Sum(ABSENCE_PRESENTATION_TBL.DURATION_HOURS)\",\"NativeReferenceName\":\"Sum of DURATION_HOURS\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"DURATION_HOURS\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 238.00,
+          "width": 450.00,
+          "x": 823.00,
+          "y": 475.00,
+          "z": 5000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Page 2",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "30739801c0b04bfa9a8d",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"1dc810858337c5223062\",\"layouts\":[{\"id\":0,\"position\":{\"x\":339.2006105122579,\"y\":63.00486501955547,\"z\":1000,\"width\":282.7892778784699,\"height\":71.06362682438234,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"ABSENCE_PRESENTATION_TBL.COUNTRY\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"ABSENCE_PRESENTATION_TBL\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"COUNTRY\"},\"Name\":\"ABSENCE_PRESENTATION_TBL.COUNTRY\",\"NativeReferenceName\":\"COUNTRY\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 71.06,
+          "width": 282.79,
+          "x": 339.20,
+          "y": 63.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"21c31b78272b59effc41\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10.989220642945721,\"y\":279.12620433082134,\"z\":4000,\"width\":1233.7231708480397,\"height\":132.60326242487838,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(ABSENCE_PRESENTATION_TBL.APPROVAL_TIME)\"}],\"Category\":[{\"queryRef\":\"ABSENCE_PRESENTATION_TBL.DEPARTMENT\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"ABSENCE_PRESENTATION_TBL\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"APPROVAL_TIME\"}},\"Function\":1},\"Name\":\"Sum(ABSENCE_PRESENTATION_TBL.APPROVAL_TIME)\",\"NativeReferenceName\":\"Average of APPROVAL_TIME\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"DEPARTMENT\"},\"Name\":\"ABSENCE_PRESENTATION_TBL.DEPARTMENT\",\"NativeReferenceName\":\"DEPARTMENT\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"APPROVAL_TIME\"}},\"Function\":1}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[{\"name\":\"4af7d8e22c373c7a035b\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"ABSENCE_PRESENTATION_TBL\"}},\"Property\":\"APPROVAL_TIME\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"ABSENCE_PRESENTATION_TBL\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"APPROVAL_TIME\"}},\"Right\":{\"Literal\":{\"Value\":\"0L\"}}}}}}}]},\"type\":\"Advanced\",\"howCreated\":1}]",
+          "height": 132.60,
+          "width": 1233.72,
+          "x": 10.99,
+          "y": 279.13,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"5e82222b4f0b12719bef\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":430.0448344939426,\"z\":0,\"width\":1262.2951445196986,\"height\":279.858819040351,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"ABSENCE_PRESENTATION_TBL.NAME\"},{\"queryRef\":\"ABSENCE_PRESENTATION_TBL.BGN_DT\"},{\"queryRef\":\"ABSENCE_PRESENTATION_TBL.END_DT\"},{\"queryRef\":\"ABSENCE_PRESENTATION_TBL.DEPARTMENT\"},{\"queryRef\":\"ABSENCE_PRESENTATION_TBL.COUNTRY\"},{\"queryRef\":\"Sum(ABSENCE_PRESENTATION_TBL.DURATION_HOURS)\"},{\"queryRef\":\"Sum(ABSENCE_PRESENTATION_TBL.TOTAL_COST)\"},{\"queryRef\":\"Sum(ABSENCE_PRESENTATION_TBL.APPROVAL_TIME)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"ABSENCE_PRESENTATION_TBL\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"NAME\"},\"Name\":\"ABSENCE_PRESENTATION_TBL.NAME\",\"NativeReferenceName\":\"NAME\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"BGN_DT\"},\"Name\":\"ABSENCE_PRESENTATION_TBL.BGN_DT\",\"NativeReferenceName\":\"BGN_DT\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"END_DT\"},\"Name\":\"ABSENCE_PRESENTATION_TBL.END_DT\",\"NativeReferenceName\":\"END_DT\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"DEPARTMENT\"},\"Name\":\"ABSENCE_PRESENTATION_TBL.DEPARTMENT\",\"NativeReferenceName\":\"DEPARTMENT\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"COUNTRY\"},\"Name\":\"ABSENCE_PRESENTATION_TBL.COUNTRY\",\"NativeReferenceName\":\"COUNTRY\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"DURATION_HOURS\"}},\"Function\":0},\"Name\":\"Sum(ABSENCE_PRESENTATION_TBL.DURATION_HOURS)\",\"NativeReferenceName\":\"Sum of DURATION_HOURS\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"TOTAL_COST\"}},\"Function\":0},\"Name\":\"Sum(ABSENCE_PRESENTATION_TBL.TOTAL_COST)\",\"NativeReferenceName\":\"Sum of TOTAL_COST\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"APPROVAL_TIME\"}},\"Function\":1},\"Name\":\"Sum(ABSENCE_PRESENTATION_TBL.APPROVAL_TIME)\",\"NativeReferenceName\":\"Average of APPROVAL_TIME\"}]},\"drillFilterOtherVisuals\":true,\"filterSortOrder\":3}}",
+          "filters": "[{\"name\":\"a136433979554bfae69a\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"ABSENCE_PRESENTATION_TBL\"}},\"Property\":\"NAME\"}},\"type\":\"Categorical\",\"howCreated\":0,\"isHiddenInViewMode\":false,\"ordinal\":0},{\"name\":\"1642377daf181273a1c5\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"ABSENCE_PRESENTATION_TBL\"}},\"Property\":\"BGN_DT\"}},\"type\":\"Categorical\",\"howCreated\":0,\"isHiddenInViewMode\":false,\"ordinal\":1},{\"name\":\"5c8ac834cdfc4262b410\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"ABSENCE_PRESENTATION_TBL\"}},\"Property\":\"END_DT\"}},\"type\":\"Categorical\",\"howCreated\":0,\"isHiddenInViewMode\":false,\"ordinal\":2},{\"name\":\"396125ac42abeae3268e\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"ABSENCE_PRESENTATION_TBL\"}},\"Property\":\"COUNTRY\"}},\"type\":\"Categorical\",\"howCreated\":0,\"isHiddenInViewMode\":false,\"ordinal\":3},{\"name\":\"16250fed03a1171c0a81\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"ABSENCE_PRESENTATION_TBL\"}},\"Property\":\"DEPARTMENT\"}},\"type\":\"Categorical\",\"howCreated\":0,\"isHiddenInViewMode\":false,\"ordinal\":4}]",
+          "height": 279.86,
+          "width": 1262.30,
+          "x": 0.00,
+          "y": 430.04,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"790ab1a668a438876859\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1179.5096823428407,\"y\":51.28302966708004,\"z\":2000,\"width\":100.36821520557092,\"height\":40.29380902413431,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"actionButton\",\"drillFilterOtherVisuals\":true,\"objects\":{\"icon\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'back'\"}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'Back'\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 40.29,
+          "width": 100.37,
+          "x": 1179.51,
+          "y": 51.28,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"918d3a76e9c89b2f40cb\",\"layouts\":[{\"id\":0,\"position\":{\"x\":2.930458838118859,\"y\":145.05771248688353,\"z\":6000,\"width\":1238.8514738147476,\"height\":134.0684918439378,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"ABSENCE_PRESENTATION_TBL.DEPARTMENT\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(ABSENCE_PRESENTATION_TBL.DURATION_HOURS)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"ABSENCE_PRESENTATION_TBL\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"DEPARTMENT\"},\"Name\":\"ABSENCE_PRESENTATION_TBL.DEPARTMENT\",\"NativeReferenceName\":\"DEPARTMENT\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"DURATION_HOURS\"}},\"Function\":0},\"Name\":\"Sum(ABSENCE_PRESENTATION_TBL.DURATION_HOURS)\",\"NativeReferenceName\":\"Sum of DURATION_HOURS\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"DURATION_HOURS\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"filterSortOrder\":3,\"hasDefaultSort\":true}}",
+          "filters": "[{\"name\":\"e5827a990e6c131d859a\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"ABSENCE_PRESENTATION_TBL\"}},\"Property\":\"DEPARTMENT\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"subquery\",\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"ABSENCE_PRESENTATION_TBL\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"DEPARTMENT\"},\"Name\":\"field\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"DEPARTMENT\"}},\"Function\":3}}}],\"Top\":10}}},\"Type\":2},{\"Name\":\"a\",\"Entity\":\"ABSENCE_PRESENTATION_TBL\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"DEPARTMENT\"}}],\"Table\":{\"SourceRef\":{\"Source\":\"subquery\"}}}}}]},\"type\":\"TopN\",\"howCreated\":0,\"isHiddenInViewMode\":false,\"ordinal\":0},{\"name\":\"b497c47bd55ebf4ea116\",\"expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"ABSENCE_PRESENTATION_TBL\"}},\"Property\":\"DURATION_HOURS\"}},\"Function\":1}},\"type\":\"Advanced\",\"howCreated\":1,\"isHiddenInViewMode\":false,\"ordinal\":1}]",
+          "height": 134.07,
+          "width": 1238.85,
+          "x": 2.93,
+          "y": 145.06,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"a15f0687a69c78c7a1f8\",\"layouts\":[{\"id\":0,\"position\":{\"x\":670.342459219689,\"y\":63.00486501955547,\"z\":3000,\"width\":221.98225698750358,\"height\":81.32023275779834,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"ABSENCE_PRESENTATION_TBL.DEPARTMENT\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"ABSENCE_PRESENTATION_TBL\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"DEPARTMENT\"},\"Name\":\"ABSENCE_PRESENTATION_TBL.DEPARTMENT\",\"NativeReferenceName\":\"DEPARTMENT\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 81.32,
+          "width": 221.98,
+          "x": 670.34,
+          "y": 63.00,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"b60ac05e0dc1906e5b48\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":5000,\"width\":1280,\"height\":51,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'rectangle'\"}}}}}],\"rotation\":[{\"properties\":{\"shapeAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}],\"text\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}},{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Absence Insights'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"20D\"}}}},\"selector\":{\"id\":\"default\"}}],\"fill\":[{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":9,\"Percent\":0}}}}}},\"selector\":{\"id\":\"default\"}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 51.00,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"c170642a23369be46cab\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10.989220642945721,\"y\":51.28302966708004,\"z\":7000,\"width\":300.37203090718305,\"height\":93.77468281980349,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"ABSENCE_PRESENTATION_TBL.BGN_DT\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"ABSENCE_PRESENTATION_TBL\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"BGN_DT\"},\"Name\":\"ABSENCE_PRESENTATION_TBL.BGN_DT\",\"NativeReferenceName\":\"BGN_DT\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"BGN_DT\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"data\":[{\"properties\":{\"startDate\":{\"expr\":{\"Literal\":{\"Value\":\"datetime'2014-01-01T00:00:00'\"}}},\"endDate\":{\"expr\":{\"Literal\":{\"Value\":\"datetime'2015-01-01T00:00:00'\"}}},\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Between'\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"ABSENCE_PRESENTATION_TBL\",\"Type\":0}],\"Where\":[{\"Condition\":{\"And\":{\"Left\":{\"Comparison\":{\"ComparisonKind\":2,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"BGN_DT\"}},\"Right\":{\"Literal\":{\"Value\":\"datetime'2014-01-01T00:00:00'\"}}}},\"Right\":{\"Comparison\":{\"ComparisonKind\":3,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"BGN_DT\"}},\"Right\":{\"Literal\":{\"Value\":\"datetime'2015-01-02T00:00:00'\"}}}}}}}]}}}}]}}}",
+          "filters": "[]",
+          "height": 93.77,
+          "width": 300.37,
+          "x": 10.99,
+          "y": 51.28,
+          "z": 7000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

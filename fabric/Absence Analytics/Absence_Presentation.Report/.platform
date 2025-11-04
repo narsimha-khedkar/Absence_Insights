@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Absence_Presentation"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "e6b06263-7e44-aaf6-4346-284488be076f"
+  }
+}

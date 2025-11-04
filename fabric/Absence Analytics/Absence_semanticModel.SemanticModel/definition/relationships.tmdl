@@ -1,0 +1,40 @@
+relationship f0d4af9e-0029-eb5e-aa0a-9a879a4a14f4
+	fromColumn: DIM_PERSONAL_TBL.EMPLID_ID
+	toColumn: FACT_ABSENCE_TBL.EMPLID_ID
+
+relationship 65247fa1-d9ec-f87f-b664-1280590030c3
+	fromColumn: DIM_PERSONAL_TBL.EMPLID_ID
+	toColumn: DIM_JOB_TBL.EMPLID_ID
+
+relationship 260cccf2-6f12-f74b-28f9-793ab14961ef
+	fromColumn: FACT_ABSENCE_TBL.PIN_NUM
+	toColumn: DIM_PIN_TBL.PIN_NUM
+
+relationship 371e2911-f1fa-0127-e508-c69c9de03be9
+	fromColumn: DIM_JOB_TBL.LOCATION_ID
+	toColumn: DIM_LOCATION_TBL.LOCATION_ID
+
+relationship 0b0a5db0-4140-5055-39de-cc82cd9e515d
+	fromColumn: DIM_JOB_TBL.DEPTID_ID
+	toColumn: DIM_DEPT_TBL.DEPTID_ID
+
+relationship 4f6fd02b-39d5-922b-8083-f491ea1ab59a
+	fromColumn: DIM_LOCATION_TBL.COUNTRY_ID
+	toColumn: DIM_COUNTRY_TBL.COUNTRY_ID
+
+relationship 5886f35b-b3cc-bdbb-b168-acb6a5c394e0
+	fromColumn: FACT_ABSENCE_TBL.TRANSACTION_NBR
+	toColumn: DIM_GP_STATUS_TBL.TRANSACTION_NBR
+
+relationship 929bb784-b728-45b4-feca-94dbdf8aafcd
+	fromColumn: DIM_DEPT_TBL.SETID_ID
+	toColumn: DIM_SETID_TBL.SETID_ID
+
+relationship e84f4b90-33f3-db7f-f9eb-f27f037d315b
+	fromColumn: DIM_PERSONAL_TBL.MAR_STATUS
+	toColumn: DIM_MAR_STATUS_TBL.FIELDVALUE_ID
+
+relationship abe8ae69-9fa7-6b6d-cc42-33a12b79e550
+	fromColumn: DIM_PERSONAL_TBL.SEX
+	toColumn: DIM_XLAT_TBL.FIELDVALUE_ID
+

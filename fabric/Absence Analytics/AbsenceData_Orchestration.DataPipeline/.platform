@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataPipeline",
+    "displayName": "AbsenceData_Orchestration"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "6e419034-52dc-9660-4e28-555290dc0dde"
+  }
+}

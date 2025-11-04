@@ -1,0 +1,15 @@
+CREATE TABLE [Absence].[DIM_PERSONAL_TBL] (
+
+	[EMPLID_ID] int NOT NULL, 
+	[EMPLID] varchar(255) NOT NULL, 
+	[NAME] varchar(255) NULL, 
+	[LAST_NAME] varchar(255) NULL, 
+	[FIRST_NAME] varchar(255) NULL, 
+	[SEX] int NULL, 
+	[MAR_STATUS] int NULL, 
+	[BIRTHDATE] date NULL
+);
+
+
+GO
+ALTER TABLE [Absence].[DIM_PERSONAL_TBL] ADD CONSTRAINT PK_DIM_PERSONAL_TBL primary key NONCLUSTERED ([EMPLID_ID]);

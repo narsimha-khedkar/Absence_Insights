@@ -1,0 +1,192 @@
+table 'Absence.ABSENCE_PRESENTATION_TBL'
+	lineageTag: 69860b3d-7378-43db-976c-4692cdf3903d
+	sourceLineageTag: [dbo].[Absence.ABSENCE_PRESENTATION_TBL]
+
+	column NAME
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ea63399f-713b-42d2-8e47-7d89b9db1a37
+		sourceLineageTag: NAME
+		summarizeBy: none
+		sourceColumn: NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column FIRST_NAME
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: aafe60c6-4933-4202-b2f5-ad2a49ab0801
+		sourceLineageTag: FIRST_NAME
+		summarizeBy: none
+		sourceColumn: FIRST_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column LAST_NAME
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 0430f159-46a7-4696-9c0a-fddafced08f9
+		sourceLineageTag: LAST_NAME
+		summarizeBy: none
+		sourceColumn: LAST_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column BGN_DT
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: b595044f-7550-4ad6-924c-03b01b2ddab4
+		sourceLineageTag: BGN_DT
+		summarizeBy: none
+		sourceColumn: BGN_DT
+
+		annotation SummarizationSetBy = Automatic
+
+	column END_DT
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: f9d8da77-de7c-41a1-8de6-3b31d95df2db
+		sourceLineageTag: END_DT
+		summarizeBy: none
+		sourceColumn: END_DT
+
+		annotation SummarizationSetBy = Automatic
+
+	column DURATION_HOURS
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 9ae00448-13f3-48fd-8ca9-7bc82e16a4c6
+		sourceLineageTag: DURATION_HOURS
+		summarizeBy: sum
+		sourceColumn: DURATION_HOURS
+
+		annotation SummarizationSetBy = Automatic
+
+	column ABS_TYPE
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 330e825c-7a2e-4119-bf6e-a836468a1e35
+		sourceLineageTag: ABS_TYPE
+		summarizeBy: none
+		sourceColumn: ABS_TYPE
+
+		annotation SummarizationSetBy = Automatic
+
+	column SUB_DATE
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: bfd06645-1e43-45cf-af3e-b96a92d2f7ff
+		sourceLineageTag: SUB_DATE
+		summarizeBy: none
+		sourceColumn: SUB_DATE
+
+		annotation SummarizationSetBy = Automatic
+
+	column APR_DATE
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: e4997348-26ca-4ea9-89a3-43ca2333023e
+		sourceLineageTag: APR_DATE
+		summarizeBy: none
+		sourceColumn: APR_DATE
+
+		annotation SummarizationSetBy = Automatic
+
+	column STATUS
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 9efd10b4-db92-469b-9f84-b7cf092231c5
+		sourceLineageTag: STATUS
+		summarizeBy: none
+		sourceColumn: STATUS
+
+		annotation SummarizationSetBy = Automatic
+
+	column HIRE_DT
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 9f41a8f8-6d2d-4729-a886-8a4b8b1a4a15
+		sourceLineageTag: HIRE_DT
+		summarizeBy: none
+		sourceColumn: HIRE_DT
+
+		annotation SummarizationSetBy = Automatic
+
+	column HOURLY_RT
+		dataType: double
+		sourceProviderType: float
+		lineageTag: fb6a0488-3564-468f-8753-f31d0d79eb7f
+		sourceLineageTag: HOURLY_RT
+		summarizeBy: sum
+		sourceColumn: HOURLY_RT
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column COUNTRY
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 840fbe47-8afc-4a21-81cb-a47128b845b9
+		sourceLineageTag: COUNTRY
+		summarizeBy: none
+		sourceColumn: COUNTRY
+
+		annotation SummarizationSetBy = Automatic
+
+	column DEPARTMENT
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: fcb381cb-8e43-4d0e-8cfb-7bdda772a42d
+		sourceLineageTag: DEPARTMENT
+		summarizeBy: none
+		sourceColumn: DEPARTMENT
+
+		annotation SummarizationSetBy = Automatic
+
+	column BIRTHDATE
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 2812a1c2-2397-4a7a-8544-33142cbc1bab
+		sourceLineageTag: BIRTHDATE
+		summarizeBy: none
+		sourceColumn: BIRTHDATE
+
+		annotation SummarizationSetBy = Automatic
+
+	column GENDER
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 14c38ab5-9aa6-4411-8fac-58b2caa8da11
+		sourceLineageTag: GENDER
+		summarizeBy: none
+		sourceColumn: GENDER
+
+		annotation SummarizationSetBy = Automatic
+
+	column MARITAL_STATUS
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ecb93fd1-ba8a-4d4c-b3de-f30806dd33d3
+		sourceLineageTag: MARITAL_STATUS
+		summarizeBy: none
+		sourceColumn: MARITAL_STATUS
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Absence.ABSENCE_PRESENTATION_TBL' = entity
+		mode: directLake
+		source
+			entityName: Absence.ABSENCE_PRESENTATION_TBL
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

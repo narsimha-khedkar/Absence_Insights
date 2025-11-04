@@ -1,0 +1,97 @@
+table DIM_PERSONAL_TBL
+	lineageTag: 2fc912fa-ddd6-4378-ae3a-ee6b4a31bcdb
+	sourceLineageTag: [Absence].[DIM_PERSONAL_TBL]
+
+	column EMPLID_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: e6b63e77-4229-4b46-8aac-62c0b336f116
+		sourceLineageTag: EMPLID_ID
+		summarizeBy: count
+		sourceColumn: EMPLID_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column EMPLID
+		dataType: string
+		sourceProviderType: varchar(255)
+		lineageTag: 8ab1234b-82a2-45c2-b37e-5fa481c1d677
+		sourceLineageTag: EMPLID
+		summarizeBy: none
+		sourceColumn: EMPLID
+
+		annotation SummarizationSetBy = Automatic
+
+	column NAME
+		dataType: string
+		sourceProviderType: varchar(255)
+		lineageTag: 33d2c3eb-576e-4278-82bf-b432d46cbd8a
+		sourceLineageTag: NAME
+		summarizeBy: none
+		sourceColumn: NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column LAST_NAME
+		dataType: string
+		sourceProviderType: varchar(255)
+		lineageTag: 9a9ee45a-eb94-4454-b675-830eec2f9f09
+		sourceLineageTag: LAST_NAME
+		summarizeBy: none
+		sourceColumn: LAST_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column FIRST_NAME
+		dataType: string
+		sourceProviderType: varchar(255)
+		lineageTag: 26656c41-5c42-4f77-bb78-3a2220687cc5
+		sourceLineageTag: FIRST_NAME
+		summarizeBy: none
+		sourceColumn: FIRST_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column SEX
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 30c098f5-f922-460b-b6bd-b70bf1d82864
+		sourceLineageTag: SEX
+		summarizeBy: sum
+		sourceColumn: SEX
+
+		annotation SummarizationSetBy = Automatic
+
+	column MAR_STATUS
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: e94abf7d-7c57-44ce-be48-81bb3cab872f
+		sourceLineageTag: MAR_STATUS
+		summarizeBy: sum
+		sourceColumn: MAR_STATUS
+
+		annotation SummarizationSetBy = Automatic
+
+	column BIRTHDATE
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: e53c0618-ebc8-4e76-9d5d-e8951e4eac7e
+		sourceLineageTag: BIRTHDATE
+		summarizeBy: none
+		sourceColumn: BIRTHDATE
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DIM_PERSONAL_TBL = entity
+		mode: directLake
+		source
+			entityName: DIM_PERSONAL_TBL
+			schemaName: Absence
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

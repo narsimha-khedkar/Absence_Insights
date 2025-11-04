@@ -1,0 +1,66 @@
+table DIM_LOCATION_TBL
+	lineageTag: 13223d34-128b-429a-a16c-0ba8e60df148
+	sourceLineageTag: [Absence].[DIM_LOCATION_TBL]
+
+	column LOCATION_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 02dbc5c7-6954-4d84-b7b0-9030ce9878d1
+		sourceLineageTag: LOCATION_ID
+		summarizeBy: none
+		sourceColumn: LOCATION_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column LOCATION
+		dataType: string
+		sourceProviderType: varchar(255)
+		lineageTag: da1ed93b-08b9-419f-8478-4e53c0d21c82
+		sourceLineageTag: LOCATION
+		summarizeBy: none
+		sourceColumn: LOCATION
+
+		annotation SummarizationSetBy = Automatic
+
+	column SETID_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 49f59819-bbc2-4bcc-9029-11b636196bb7
+		sourceLineageTag: SETID_ID
+		summarizeBy: count
+		sourceColumn: SETID_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column COUNTRY_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 55cb2e81-c970-4ef5-b770-34d409f99280
+		sourceLineageTag: COUNTRY_ID
+		summarizeBy: none
+		sourceColumn: COUNTRY_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ADDRESS
+		dataType: string
+		sourceProviderType: varchar(255)
+		lineageTag: 8779086b-8737-4dec-bea4-12c94f6b61e8
+		sourceLineageTag: ADDRESS
+		summarizeBy: none
+		sourceColumn: ADDRESS
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DIM_LOCATION_TBL = entity
+		mode: directLake
+		source
+			entityName: DIM_LOCATION_TBL
+			schemaName: Absence
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

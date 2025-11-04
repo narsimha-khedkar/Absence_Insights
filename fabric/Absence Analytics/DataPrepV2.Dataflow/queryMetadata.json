@@ -1,0 +1,68 @@
+{
+  "formatVersion": "202502",
+  "computeEngineSettings": {},
+  "name": "DataPrepV2",
+  "queryGroups": [],
+  "documentLocale": "en-US",
+  "queriesMetadata": {
+    "Absence DIM_COUNTRY_TBL": {
+      "queryId": "69cf653a-8c39-4c46-b71b-63a1fb0ab680",
+      "queryName": "Absence DIM_COUNTRY_TBL"
+    },
+    "Absence DIM_DEPT_TBL": {
+      "queryId": "27cb5dbb-f52b-48e6-aa72-56ac948218ec",
+      "queryName": "Absence DIM_DEPT_TBL"
+    },
+    "Absence DIM_GP_STATUS_TBL": {
+      "queryId": "e98701a2-784d-4a67-8526-6cdaad9517d8",
+      "queryName": "Absence DIM_GP_STATUS_TBL"
+    },
+    "Absence DIM_JOB_TBL": {
+      "queryId": "2abea60c-9583-4613-b1ec-a76ba07b4f76",
+      "queryName": "Absence DIM_JOB_TBL"
+    },
+    "Absence DIM_LOCATION_TBL": {
+      "queryId": "ade4c2f4-2827-4b48-b67d-9f97fb33dc27",
+      "queryName": "Absence DIM_LOCATION_TBL"
+    },
+    "Absence DIM_MAR_STATUS_TBL": {
+      "queryId": "86fc3fe4-e87c-48c0-8e87-9a94f8ff67db",
+      "queryName": "Absence DIM_MAR_STATUS_TBL"
+    },
+    "Absence DIM_PERSONAL_TBL": {
+      "queryId": "6338d83c-1251-44d6-8bf1-23ff6e950dc4",
+      "queryName": "Absence DIM_PERSONAL_TBL"
+    },
+    "Absence DIM_PIN_TBL": {
+      "queryId": "438e84d1-d20a-4831-b7e0-b2e731c40e30",
+      "queryName": "Absence DIM_PIN_TBL"
+    },
+    "Absence DIM_XLAT_TBL": {
+      "queryId": "d80a1f3b-9dc7-4b1c-a1d9-273961b78567",
+      "queryName": "Absence DIM_XLAT_TBL"
+    },
+    "Absence FACT_ABSENCE_TBL": {
+      "queryId": "3a60ceea-c9e4-4874-b7e8-b3d4908ca216",
+      "queryName": "Absence FACT_ABSENCE_TBL"
+    },
+    "DefaultDestination": {
+      "queryId": "31dd1a7d-a006-4ca5-be2d-903f3399bdc8",
+      "queryName": "DefaultDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "Absence FACT_ABSENCE_TBL_DataDestination": {
+      "queryId": "d7b108cb-9595-4e47-af4f-7b0f02300e08",
+      "queryName": "Absence FACT_ABSENCE_TBL_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    }
+  },
+  "connections": [
+    {
+      "path": "Warehouse",
+      "kind": "Warehouse",
+      "connectionId": "{\"ClusterId\":\"981e13f7-83d9-46f6-8ef7-f75610655d5e\",\"DatasourceId\":\"e28e30d6-709a-48f8-b398-455f4699f076\"}"
+    }
+  ]
+}

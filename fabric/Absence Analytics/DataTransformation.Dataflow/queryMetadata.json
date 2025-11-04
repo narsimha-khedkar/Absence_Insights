@@ -1,0 +1,72 @@
+{
+  "formatVersion": "202502",
+  "computeEngineSettings": {},
+  "name": "DataCleanup",
+  "queryGroups": [],
+  "documentLocale": "en-US",
+  "queriesMetadata": {
+    "DefaultDestination": {
+      "queryId": "04c36340-4e12-425a-921a-a3fc19bbdd33",
+      "queryName": "DefaultDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "PS_DEPT_TBL": {
+      "queryId": "6de5ca2f-7077-4d16-b1b6-8f882aa49868",
+      "queryName": "PS_DEPT_TBL",
+      "loadEnabled": false
+    },
+    "PS_GP_ABS_EVENT": {
+      "queryId": "abc361da-7648-4593-afa8-d28d48544e32",
+      "queryName": "PS_GP_ABS_EVENT",
+      "loadEnabled": false
+    },
+    "PS_GP_ABS_SS_STA": {
+      "queryId": "f1233e7a-bcf7-4d7a-ace7-0381599e8319",
+      "queryName": "PS_GP_ABS_SS_STA",
+      "loadEnabled": false
+    },
+    "PS_GP_PIN": {
+      "queryId": "dedc17e8-0689-4832-b080-a246e8f12dbc",
+      "queryName": "PS_GP_PIN",
+      "loadEnabled": false
+    },
+    "PS_JOB": {
+      "queryId": "42c43846-8da8-4ff4-8e52-d9571f0cec44",
+      "queryName": "PS_JOB",
+      "loadEnabled": false
+    },
+    "PS_LOCATION_TBL": {
+      "queryId": "59571f44-fffb-4711-a345-e3d78156c739",
+      "queryName": "PS_LOCATION_TBL",
+      "loadEnabled": false
+    },
+    "PS_PERSONAL_DATA": {
+      "queryId": "60450405-da68-41f5-b8ad-c22f8f15d2d1",
+      "queryName": "PS_PERSONAL_DATA",
+      "loadEnabled": false
+    },
+    "PS_SETID_TBL": {
+      "queryId": "27c133ee-5d3a-41cb-98e9-6e8916fb9761",
+      "queryName": "PS_SETID_TBL",
+      "loadEnabled": false
+    },
+    "PSXLATITEM": {
+      "queryId": "ed0cb2fb-6558-46d4-a409-f166976ab7f6",
+      "queryName": "PSXLATITEM",
+      "loadEnabled": false
+    },
+    "PS_COUNTRY_TBL": {
+      "queryId": "5fcabe59-46bc-42a9-8a37-84b334a6e42f",
+      "queryName": "PS_COUNTRY_TBL",
+      "loadEnabled": false
+    }
+  },
+  "connections": [
+    {
+      "path": "Lakehouse",
+      "kind": "Lakehouse",
+      "connectionId": "{\"ClusterId\":\"981e13f7-83d9-46f6-8ef7-f75610655d5e\",\"DatasourceId\":\"36f703e8-ca2f-415e-b26a-0eeb14aa8350\"}"
+    }
+  ]
+}

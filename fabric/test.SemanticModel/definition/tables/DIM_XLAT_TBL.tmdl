@@ -1,0 +1,44 @@
+table DIM_XLAT_TBL
+	lineageTag: 928deb93-b9d4-46f8-b509-05039204fa5d
+	sourceLineageTag: [Absence].[DIM_XLAT_TBL]
+
+	column FIELDVALUE_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: b658faf5-91b8-49ba-b5ee-9fd2588c42de
+		sourceLineageTag: FIELDVALUE_ID
+		summarizeBy: count
+		sourceColumn: FIELDVALUE_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column FIELDVALUE
+		dataType: string
+		sourceProviderType: varchar(255)
+		lineageTag: 082d5913-27b6-48b2-8121-af180affc6bc
+		sourceLineageTag: FIELDVALUE
+		summarizeBy: none
+		sourceColumn: FIELDVALUE
+
+		annotation SummarizationSetBy = Automatic
+
+	column XLATLONGNAME
+		dataType: string
+		sourceProviderType: varchar(255)
+		lineageTag: 1064e8d8-8e81-4fd7-8caf-53872c4b5183
+		sourceLineageTag: XLATLONGNAME
+		summarizeBy: none
+		sourceColumn: XLATLONGNAME
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DIM_XLAT_TBL = entity
+		mode: directLake
+		source
+			entityName: DIM_XLAT_TBL
+			schemaName: Absence
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

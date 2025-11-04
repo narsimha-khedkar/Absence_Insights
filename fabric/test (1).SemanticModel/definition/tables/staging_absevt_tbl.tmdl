@@ -1,0 +1,99 @@
+table staging_absevt_tbl
+	lineageTag: 330c26f3-6501-4ee8-88de-d480c22d6b44
+	sourceLineageTag: [dbo].[staging_absevt_tbl]
+
+	column EMPLID
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 53544547-6775-41ba-a0cd-84ca3e45644f
+		sourceLineageTag: EMPLID
+		summarizeBy: none
+		sourceColumn: EMPLID
+
+		annotation SummarizationSetBy = Automatic
+
+	column EMPL_RCD
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 76306794-4813-4c3e-86fe-181c8e98d605
+		sourceLineageTag: EMPL_RCD
+		summarizeBy: none
+		sourceColumn: EMPL_RCD
+
+		annotation SummarizationSetBy = Automatic
+
+	column BGN_DT
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 00972866-fa71-49b3-8e72-e8fadeebb089
+		sourceLineageTag: BGN_DT
+		summarizeBy: none
+		sourceColumn: BGN_DT
+
+		annotation SummarizationSetBy = Automatic
+
+	column PIN_TAKE_NUM
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: c8b98af2-6029-44bc-8dd7-3c3b5d29ca7a
+		sourceLineageTag: PIN_TAKE_NUM
+		summarizeBy: sum
+		sourceColumn: PIN_TAKE_NUM
+
+		annotation SummarizationSetBy = Automatic
+
+	column END_DT
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 68bafd11-1c88-49dd-bd7e-167c1eb958bd
+		sourceLineageTag: END_DT
+		summarizeBy: none
+		sourceColumn: END_DT
+
+		annotation SummarizationSetBy = Automatic
+
+	column DURATION_HOURS
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 6ce1d0be-4343-42f7-9a84-095343cb1cb5
+		sourceLineageTag: DURATION_HOURS
+		summarizeBy: sum
+		sourceColumn: DURATION_HOURS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column LAST_UPDT_DT
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 1850baf3-7ab1-492e-a46b-f7bbf36472d0
+		sourceLineageTag: LAST_UPDT_DT
+		summarizeBy: none
+		sourceColumn: LAST_UPDT_DT
+
+		annotation SummarizationSetBy = Automatic
+
+	column TRANSACTION_NBR
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: fdaec241-2615-4d55-b323-25d863915230
+		sourceLineageTag: TRANSACTION_NBR
+		summarizeBy: none
+		sourceColumn: TRANSACTION_NBR
+
+		annotation SummarizationSetBy = Automatic
+
+	partition staging_absevt_tbl = entity
+		mode: directLake
+		source
+			entityName: staging_absevt_tbl
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

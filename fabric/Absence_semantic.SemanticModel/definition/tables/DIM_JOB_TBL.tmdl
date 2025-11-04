@@ -1,0 +1,80 @@
+table DIM_JOB_TBL
+	lineageTag: 8dbcb40c-2454-4d9c-b96b-fed8227c18c5
+	sourceLineageTag: [Absence].[DIM_JOB_TBL]
+
+	column EMPLID_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: b60e131d-42a7-450a-8b25-f025ab9b1247
+		sourceLineageTag: EMPLID_ID
+		summarizeBy: count
+		sourceColumn: EMPLID_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column EMPL_RCD
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: f638e397-3dfe-49bf-a948-d15fd9bf6a57
+		sourceLineageTag: EMPL_RCD
+		summarizeBy: sum
+		sourceColumn: EMPL_RCD
+
+		annotation SummarizationSetBy = Automatic
+
+	column DEPTID_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: cc5ab08d-3b5e-4adf-8073-b7f6c9c5c708
+		sourceLineageTag: DEPTID_ID
+		summarizeBy: count
+		sourceColumn: DEPTID_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column LOCATION_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 4b223b01-31c7-40a2-88e2-f2355545e1ac
+		sourceLineageTag: LOCATION_ID
+		summarizeBy: count
+		sourceColumn: LOCATION_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column HIRE_DT
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 759f8e99-50b4-47b3-94e5-10bae03c42d8
+		sourceLineageTag: HIRE_DT
+		summarizeBy: none
+		sourceColumn: HIRE_DT
+
+		annotation SummarizationSetBy = Automatic
+
+	column HOURLY_RT
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 2fd168e2-5b3d-445f-8798-b9ed1b99bcc7
+		sourceLineageTag: HOURLY_RT
+		summarizeBy: sum
+		sourceColumn: HOURLY_RT
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition DIM_JOB_TBL = entity
+		mode: directLake
+		source
+			entityName: DIM_JOB_TBL
+			schemaName: Absence
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

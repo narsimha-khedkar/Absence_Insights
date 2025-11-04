@@ -1,0 +1,44 @@
+table DIM_MAR_STATUS_TBL
+	lineageTag: 53dafc28-daa9-4334-a8b2-725814bec906
+	sourceLineageTag: [Absence].[DIM_MAR_STATUS_TBL]
+
+	column FIELDVALUE_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 084d01b3-7f50-4976-acbe-c857009e8fd0
+		sourceLineageTag: FIELDVALUE_ID
+		summarizeBy: none
+		sourceColumn: FIELDVALUE_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column FIELDVALUE
+		dataType: string
+		sourceProviderType: varchar(255)
+		lineageTag: 1592adf8-848a-4c6b-af3c-ac7caf4f14d9
+		sourceLineageTag: FIELDVALUE
+		summarizeBy: none
+		sourceColumn: FIELDVALUE
+
+		annotation SummarizationSetBy = Automatic
+
+	column XLATLONGNAME
+		dataType: string
+		sourceProviderType: varchar(255)
+		lineageTag: c7fad810-95cb-4a8f-90d4-dab733d0cc13
+		sourceLineageTag: XLATLONGNAME
+		summarizeBy: none
+		sourceColumn: XLATLONGNAME
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DIM_MAR_STATUS_TBL = entity
+		mode: directLake
+		source
+			entityName: DIM_MAR_STATUS_TBL
+			schemaName: Absence
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

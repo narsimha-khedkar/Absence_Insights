@@ -1,0 +1,55 @@
+table DIM_DEPT_TBL
+	lineageTag: 65cd9ad5-2e8c-41f6-90ca-25132dab29fe
+	sourceLineageTag: [Absence].[DIM_DEPT_TBL]
+
+	column DEPTID_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 277ae44d-c649-408a-af51-67a43db8b1e0
+		sourceLineageTag: DEPTID_ID
+		summarizeBy: none
+		sourceColumn: DEPTID_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column DEPTID
+		dataType: string
+		sourceProviderType: varchar(255)
+		lineageTag: 1279a5be-c75b-4577-94b2-f6c7f1785edb
+		sourceLineageTag: DEPTID
+		summarizeBy: none
+		sourceColumn: DEPTID
+
+		annotation SummarizationSetBy = Automatic
+
+	column SETID_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 108b198f-e59f-466e-9a1d-76151ad61716
+		sourceLineageTag: SETID_ID
+		summarizeBy: none
+		sourceColumn: SETID_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column DESCR
+		dataType: string
+		sourceProviderType: varchar(255)
+		lineageTag: 6404dd64-546e-4ecd-ad26-4072b338364a
+		sourceLineageTag: DESCR
+		summarizeBy: none
+		sourceColumn: DESCR
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DIM_DEPT_TBL = entity
+		mode: directLake
+		source
+			entityName: DIM_DEPT_TBL
+			schemaName: Absence
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

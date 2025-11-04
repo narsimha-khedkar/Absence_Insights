@@ -1,0 +1,9 @@
+CREATE TABLE [Absence].[DIM_PIN_TBL] (
+
+	[PIN_NUM] int NOT NULL, 
+	[DESCR] varchar(255) NOT NULL
+);
+
+
+GO
+ALTER TABLE [Absence].[DIM_PIN_TBL] ADD CONSTRAINT PK_DIM_PIN_TBL primary key NONCLUSTERED ([PIN_NUM]);

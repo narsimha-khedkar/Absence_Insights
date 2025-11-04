@@ -1,0 +1,34 @@
+table DIM_PIN_TBL
+	lineageTag: caac40b8-cd9c-47ab-b6a5-ac9d539f3247
+	sourceLineageTag: [Absence].[DIM_PIN_TBL]
+
+	column PIN_NUM
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 42d3549f-2aba-4048-9953-300de7dc1a44
+		sourceLineageTag: PIN_NUM
+		summarizeBy: none
+		sourceColumn: PIN_NUM
+
+		annotation SummarizationSetBy = Automatic
+
+	column DESCR
+		dataType: string
+		sourceProviderType: varchar(255)
+		lineageTag: b33b12a6-8c06-4c29-b429-87407af9efc0
+		sourceLineageTag: DESCR
+		summarizeBy: none
+		sourceColumn: DESCR
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DIM_PIN_TBL = entity
+		mode: directLake
+		source
+			entityName: DIM_PIN_TBL
+			schemaName: Absence
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

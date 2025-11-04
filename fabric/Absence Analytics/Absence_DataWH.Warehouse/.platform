@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Warehouse",
+    "displayName": "Absence_DataWH"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "71e933a7-ef57-b77b-472c-23aa8209ab86"
+  }
+}

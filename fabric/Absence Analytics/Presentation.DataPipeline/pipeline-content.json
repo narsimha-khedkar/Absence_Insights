@@ -1,0 +1,24 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "name": "Data Presentation",
+        "type": "RefreshDataflow",
+        "dependsOn": [],
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureOutput": false,
+          "secureInput": false
+        },
+        "typeProperties": {
+          "dataflowId": "2b19c4bf-f563-4a50-b746-2c333de93170",
+          "workspaceId": "efa13f00-d56b-4522-bc45-33e7b9de7ac5",
+          "notifyOption": "NoNotification",
+          "dataflowType": "DataflowFabric"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+table DIM_COUNTRY_TBL
+	lineageTag: 8d66f295-529c-49e1-9dbb-ea0a8d42588f
+	sourceLineageTag: [Absence].[DIM_COUNTRY_TBL]
+
+	column COUNTRY_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: a6eb8c1c-8fe5-4859-bbef-3b64a61afb73
+		sourceLineageTag: COUNTRY_ID
+		summarizeBy: none
+		sourceColumn: COUNTRY_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column COUNTRY
+		dataType: string
+		sourceProviderType: varchar(255)
+		lineageTag: 236a64e5-63d0-483b-b170-3189bab1e87a
+		sourceLineageTag: COUNTRY
+		summarizeBy: none
+		sourceColumn: COUNTRY
+
+		annotation SummarizationSetBy = Automatic
+
+	column DESCR
+		dataType: string
+		sourceProviderType: varchar(255)
+		lineageTag: 74af3e54-b6d2-4bce-9b82-641cdb179f3f
+		sourceLineageTag: DESCR
+		summarizeBy: none
+		sourceColumn: DESCR
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DIM_COUNTRY_TBL = entity
+		mode: directLake
+		source
+			entityName: DIM_COUNTRY_TBL
+			schemaName: Absence
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+
